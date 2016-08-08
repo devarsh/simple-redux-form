@@ -8,7 +8,10 @@
     "build:lib": "babel src --out-dir lib",
     "build:npm": "NODE_ENV=development webpack src/index.js dist/simple-redux-form.js",
     "build:min": "NODE_ENV=production webpack src/index.js dist/simple-redux-form.min.js",
-    "test": "mocha --compilers js:babel-register --recursive 'src/__test__/*'"
+    "test": "mocha --compilers js:babel-register --recursive 'src/__test__/*'",
+    "test:coverage": "npm run build:lib && istanbul cover _mocha -- recursive 'lib/__test__/*'",
+    "show:coverage": "open coverage/lcov-report/index.html",
+    "clean": "rimraf lib coverage dist"
   },
   "repository": {
     "type": "git",
@@ -37,6 +40,7 @@
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
     "expect": "^1.20.2",
+    "istanbul": "^0.4.4",
     "mocha": "^3.0.1",
     "rimraf": "^2.5.4",
     "webpack": "^1.13.1"
