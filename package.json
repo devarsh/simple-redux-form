@@ -10,6 +10,7 @@
     "build:min": "NODE_ENV=production webpack src/index.js dist/simple-redux-form.min.js",
     "test": "mocha --compilers js:babel-register --recursive 'src/__test__/*'",
     "test:coverage": "npm run build:lib && istanbul cover _mocha -- recursive 'lib/__test__/*'",
+    "test:lint": "eslint src",
     "show:coverage": "open coverage/lcov-report/index.html",
     "clean": "rimraf lib coverage dist"
   },
