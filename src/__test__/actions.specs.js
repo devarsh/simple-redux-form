@@ -1,4 +1,5 @@
 /* global define, it, describe */
+/* eslint-disable import/no-extraneous-dependencies */
 import expect from 'expect';
 import { INITIALIZE, DISTROY, SET_FIELD, TOUCH_ALL } from '../actionTypes.js';
 import { initilize, setField, touchAll, distroy } from '../actions.js';

@@ -1,4 +1,6 @@
 /* global define, it, describe */
+/* eslint-disable import/no-extraneous-dependencies */
+
 import expect from 'expect';
 import deepFreeze from 'deep-freeze';
 import { initilize, setField, touchAll, distroy } from '../actions.js';
